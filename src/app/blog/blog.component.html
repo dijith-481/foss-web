@@ -1,0 +1,42 @@
+<h2>Blog Posts</h2>
+
+@if (blogs$ | async; as blogs) {
+  @if (blogs.length > 0) {
+    <div >
+      @for (blog of blogs; track blog.id) {
+  <a [routerLink]="['/blog',blog.id]">{{blog.blogTitle}}>
+        <article >
+          <header>
+            <h3 >
+{{ blog.blogTitle }}
+            </h3>
+            @if(blog.subtitle) {
+              <p >{{ blog.subtitle }}</p>
+            }
+            @if (blog.author || blog.dateTime) {
+              <div >
+                @if (blog.author) {
+                  <span >By {{ blog.author }}</span>
+                }
+                @if (blog.author && blog.dateTime) {
+                  <span> | </span>
+                }
+                @if (blog.dateTime) {
+                  <time [attr.datetime]="blog.dateTime">{{ blog.dateTime  }}</time>
+                }
+              </div>
+            }
+          </header>
+          <p >
+            {{ blog.description | truncate:previewLength }}
+          </p>
+        </article>
+    </a>
+      }
+    </div>
+  } @else {
+    <p>nothing</p>
+  }
+} @else {
+  <p>Loading </p>
+}
