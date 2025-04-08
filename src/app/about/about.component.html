@@ -1,11 +1,11 @@
-<div class="text-gamboge-50/70 pt-16 px-4 space-y-4">
+<div class="text-gamboge-50/70 pt-[20vh] px-[5vw] space-y-4 flex flex-col">
   <h2
     class="lexend-zetta-bold p-2 text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
   >
     About
   </h2>
   <p
-    class="space-y-2 w-[90vw] text-sm px-4 font-[300] hover:text-gamboge-50 transition-colors duration-1000 ease-in-out"
+    class="space-y-2 w-[90vw] px-4 font-[400] hover:text-gamboge-50 md:w-[70vw] transition-colors duration-1000 ease-in-out"
   >
     <span class="text-gamboge-500 font-bold">FOSS</span>
     Mec is the Free and Open-Source Cell at Govt. Model Engineering College,
@@ -15,4 +15,11 @@
     well as society at large by coding and contributing to various open source
     projects.
   </p>
+  <button
+    class="hover:bg-gamboge-400 bg-foss-bg border-gamboge-400/40 border min-w-auto w-12 text-gamboge-400/40 hover:text-foss-bg hover:w-16 transition-all duration-300 ease-in-out rounded-2xl items-center flex p-1"
+  >
+    <span class="material-symbols-outlined text-sm" (click)="goBack()">
+      arrow_back
+    </span>
+  </button>
 </div>
