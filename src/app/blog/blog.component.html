@@ -1,34 +1,38 @@
-<h2>Blog Posts</h2>
+<div class="text-gamboge-50/70 pt-[20vh] px-[5vw] space-y-4  ">
+  <h2
+    class="lexend-zetta-bold p-2 text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
+  >
+    FOSS<span class="text-gamboge-50/80 font-normal">Blogs</span>
+  </h2>
+
+
 
 @if (blogs$ | async; as blogs) {
   @if (blogs.length > 0) {
-    <div >
+    <div  class="space-y-4 flex flex-col">
       @for (blog of blogs; track blog.id) {
-  <a [routerLink]="['/blog',blog.id]">{{blog.blogTitle}}>
-        <article >
+  <a [routerLink]="['/blog',blog.id]">
+        <article class="w-full border hover:border-gamboge-400/50 transition-all duration-500 ease-in-out hover:bg-gamboge-400/10 backdrop-blur-3xl border-gamboge-400/20 min-h-[18vh]  p-4 rounded-2xl" >
           <header>
-            <h3 >
+                <div class="flex flex-row justify-between">
+            <h3 class="text-gamboge-400/70 font-black text-xl">
 {{ blog.blogTitle }}
             </h3>
+@if (blog.dateTime) {
+                  <time class="text-gamboge-50/40 text-[15px]" [attr.datetime]="blog.dateTime">{{ blog.dateTime  }}</time>
+                }
+                </div>
             @if(blog.subtitle) {
-              <p >{{ blog.subtitle }}</p>
+              <p  class="text-sm text-gamboge-50/40 ">{{ blog.subtitle }}</p>
             }
-            @if (blog.author || blog.dateTime) {
-              <div >
                 @if (blog.author) {
-                  <span >By {{ blog.author }}</span>
+                  <span >{{ blog.author }}</span>
                 }
-                @if (blog.author && blog.dateTime) {
-                  <span> | </span>
-                }
-                @if (blog.dateTime) {
-                  <time [attr.datetime]="blog.dateTime">{{ blog.dateTime  }}</time>
-                }
-              </div>
-            }
+
           </header>
-          <p >
+          <p class="text-gamboge-50/20 hover:text-gamboge-50/70 transition-all ease-in-out duration-1000" >
             {{ blog.description | truncate:previewLength }}
+                readmore...
           </p>
         </article>
     </a>
@@ -40,3 +44,5 @@
 } @else {
   <p>Loading </p>
 }
+
+</div>

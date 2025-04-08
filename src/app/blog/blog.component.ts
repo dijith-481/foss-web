@@ -14,7 +14,7 @@ import { TruncatePipe } from '../shared/pipes/truncate.pipe';
 export class BlogComponent {
   private http = inject(HttpClient);
   public blogs$: Observable<Blog[]> | undefined;
-  public previewLength: number = 50;
+  public previewLength: number = 300;
   private blogsUrl = 'blogs.json';
 
   ngOnInit(): void {
