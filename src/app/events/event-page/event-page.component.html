@@ -1,17 +1,21 @@
-<div class="flex flex-col space-y-2 ">
+<div class="flex flex-col space-y-2   ">
 <app-back-button/>
-<article class="backdrop-blur-3xl   border-gamboge-400/20 border rounded-2xl p-4">
-  <header class="text-gamboge-50/75 space-y-2" >
-    <h1 class=" text-5xl text-gamboge-50/75 font-black">{{ eventTitle }}</h1>
+<article class="backdrop-blur-3xl   border-gamboge-400/20 border space-y-4 flex flex-col items-center justify-center  rounded-2xl p-4 h-[80vh]">
+    <div class="w-1/2 aspect-square  overflow-hidden rounded-xl ">
+    <img [src]="imageUrl" class="w-full h-full" [alt]="eventTitle + ' image'" />
+    </div>
+
+  <header class="text-gamboge-50/75 space-y-2 pt-3" >
+    <h1 class=" text-5xl text-gamboge-400 font-black">{{ eventTitle }}</h1>
   </header>
-  @if (imageUrl) {
-    <img [src]="imageUrl" class="max-w-2/3 aspect-auto mx-auto " [alt]="eventTitle + ' image'" />
-  }
+
+  @if (this.buttonUrl) {
+<button class="hover:bg-gamboge-400 px-8 hover:rounded-2xl bg-foss-bg border-gamboge-400/40 border min-w-auto  text-gamboge-400/40 hover:text-foss-bg  transition-all duration-300 ease-in-out rounded-4xl hover:scale-105 items-center flex  p-2" (click)="openUrl()">{{ this.buttonContent }}</button>
+    }
   <section class="pt-6 px-4 text-gamboge-50/70 w-[80vw]">
     <p>{{ description }}</p>
   </section>
 </article>
-<app-back-button/>
-  <div class="h-[20vh]">
+  <div class="h-[10vh]">
 </div >
 </div >

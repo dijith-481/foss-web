@@ -10,5 +10,10 @@ import { BackButtonComponent } from '../../ui/back-button/back-button.component'
 export class EventPageComponent {
   @Input({ required: true }) eventTitle!: string;
   @Input({ required: true }) description!: string;
-  @Input() imageUrl?: string;
+  @Input({ required: true }) imageUrl!: string;
+  @Input() buttonContent!: string;
+  @Input() buttonUrl!: string;
+  openUrl() {
+    window.open(this.buttonUrl, '_blank');
+  }
 }

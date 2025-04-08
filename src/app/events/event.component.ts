@@ -14,7 +14,7 @@ import { TruncatePipe } from '../shared/pipes/truncate.pipe';
 export class EventComponent {
   private http = inject(HttpClient);
   public events$: Observable<Event[]> | undefined;
-  public previewLength: number = 300;
+  public previewLength: number = 150;
   private eventsUrl = 'events.json';
 
   ngOnInit(): void {

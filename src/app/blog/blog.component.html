@@ -12,7 +12,7 @@
     <div  class="space-y-4 flex flex-col">
       @for (blog of blogs; track blog.id) {
   <a [routerLink]="['/blog',blog.id]">
-        <article class="w-full border hover:border-gamboge-400/50 transition-all duration-500 ease-in-out hover:bg-gamboge-400/10 backdrop-blur-3xl border-gamboge-400/20 min-h-[18vh]  p-4 rounded-2xl" >
+        <article class="w-full border hover:border-gamboge-400/50 transition-all duration-500 ease-in-out hover:bg-gamboge-400/10 backdrop-blur-3xl border-gamboge-400/20 min-h-[18vh] max-h-20vh  p-4 rounded-2xl" >
           <header>
                 <div class="flex flex-row justify-between">
             <h3 class="text-gamboge-400/70 font-black text-xl">
@@ -30,9 +30,8 @@
                 }
 
           </header>
-          <p class="text-gamboge-50/20 hover:text-gamboge-50/70 transition-all ease-in-out duration-1000" >
+          <p class="text-gamboge-50/20 hover:text-gamboge-50/70 transition-all ease-in-out duration-1000  overflow-ellipsis" >
             {{ blog.description | truncate:previewLength }}
-                readmore...
           </p>
         </article>
     </a>
