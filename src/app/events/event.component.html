@@ -1,0 +1,42 @@
+<div class="text-gamboge-50/70 pt-[20vh] px-[5vw] space-y-4  ">
+  <h2
+    class="lexend-zetta-bold p-2 text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
+  >
+    FOSS<span class="text-gamboge-50/80 font-normal">Events</span>
+  </h2>
+
+
+
+@if (events$ | async; as events) {
+  @if (events.length > 0) {
+    <div  class="space-x-4 flex flex-row  overflow-x-scroll">
+      @for (event of events; track event.id) {
+  <a [routerLink]="['/event',event.id]">
+
+        <article class=" aspect-square md:w-auto w-[80vw] border hover:border-gamboge-400/50 transition-all duration-500 ease-in-out hover:bg-gamboge-400/10 backdrop-blur-3xl border-gamboge-400/20 md:h-[60vh]    p-4 rounded-2xl" >
+
+  @if (event.imageUrl) {
+    <img [src]="event.imageUrl" class="w-full aspect-auto overflow-hidden " [alt]="event.eventTitle" />
+  }
+          <header>
+                <div class="flex flex-row justify-between">
+            <h3 class="text-gamboge-400/70 font-black text-xl">
+{{ event.eventTitle }}
+            </h3>
+                </div>
+          </header>
+          <p class="text-gamboge-50/20 hover:text-gamboge-50/70 transition-all ease-in-out duration-1000  overflow-ellipsis" >
+            {{ event.description | truncate:previewLength }}
+          </p>
+        </article>
+    </a>
+      }
+    </div>
+  } @else {
+    <p>nothing</p>
+  }
+} @else {
+  <p>Loading </p>
+}
+
+</div>

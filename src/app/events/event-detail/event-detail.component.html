@@ -1,0 +1,15 @@
+<div class="pt-[20vh] px-[5vw] space-y-6">
+  @if (event$ | async; as event) {
+    @if (event) {
+      <app-event-page
+        [eventTitle]="event.eventTitle"
+        [description]="event.description"
+        [imageUrl]="event.imageUrl"
+      ></app-event-page>
+    } @else {
+      <p class="not-found">error</p>
+    }
+  } @else {
+    <p class="loading">Loading</p>
+  }
+</div>
