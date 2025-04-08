@@ -13,7 +13,7 @@
 
 @if (events$ | async; as events) {
   @if (events.length > 0) {
-    <div  #container class="space-x-4 flex flex-row  overflow-x-scroll">
+    <div  #container class="space-x-4 flex flex-row  overflow-x-scroll p-2">
       @for (event of events; track event.id) {
   <a [routerLink]="['/event',event.id]">
 
@@ -24,7 +24,7 @@
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-0 "></div>
 
 
-  <div class="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t h-1/3 from-gamboge-400/60   via-30% via-gamboge-400/20 to-80% to-transparent opacity-0 group-hover:opacity-100 flex flex-col transition-opacity duration-500 ease-in-out ">
+  <div class="absolute bottom-0 pb-8 left-0 right-0 z-10 p-4 bg-gradient-to-t  from-gamboge-400/60   via-30% via-gamboge-400/20 to-80% to-transparent opacity-0 group-hover:opacity-100 flex flex-col transition-opacity duration-500 ease-in-out ">
 
   <header class=" ">
       <h3 class="text-gamboge-50  font-black text-xl ">
