@@ -1,16 +1,16 @@
 <div class="flex flex-col space-y-2   ">
 <app-back-button/>
-<article class="backdrop-blur-3xl w-full   border-gamboge-400/20 border space-x-4 flex flex-row    rounded-2xl p-4 ">
-    <div class="w-auto">
-    <img [src]="imageUrl" class="aspect-square w-[50vw]  rounded-2xl" [alt]="eventTitle + ' image'" />
+<article class="backdrop-blur-3xl w-full   border-gamboge-400/20 border space-x-4 flex md:flex-row  flex-col   rounded-2xl p-4 ">
+    <div class="w-auto flex flex-col justify-center">
+    <img [src]="imageUrl" class="aspect-square w-[50vw] z-10  rounded-lg" [alt]="eventTitle + ' image'" />
     </div>
-    <div class="w-1/2 space-y-4">
+    <div class="w-1/2 space-y-4 ">
   <header class="text-gamboge-50/75  pt-3" >
     <h1 class=" text-5xl text-gamboge-400 font-black">{{ eventTitle }}</h1>
   </header>
 
   @if (this.buttonUrl) {
-<button class="hover:bg-gamboge-400 px-8 hover:rounded-2xl bg-foss-bg border-gamboge-400/40 border   text-gamboge-400/40 hover:text-foss-bg  transition-all duration-300 ease-in-out rounded-4xl hover:scale-105 items-center flex  p-2" (click)="openUrl()">{{ this.buttonContent }}</button>
+<button class="hover:bg-gamboge-400 px-8 hover:rounded-2xl z-50 bg-foss-bg border-gamboge-400/40 border   text-gamboge-400/40 hover:text-foss-bg  transition-all duration-700 ease-in-out rounded-4xl  items-center flex  p-2" (click)="openUrl()">{{ this.buttonContent }}</button>
     }
   <section class="pt-6  text-gamboge-50/70 ">
     <p>{{ description }}</p>

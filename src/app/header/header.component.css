@@ -1,0 +1,8 @@
+.visible {
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .visible {
+    width: 30vw;
+  }
+}
