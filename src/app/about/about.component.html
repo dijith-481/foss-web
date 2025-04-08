@@ -1,4 +1,7 @@
-<div class="text-gamboge-50/70 pt-[20vh] px-[5vw] space-y-4 flex flex-col">
+<div
+  #element
+  class="text-gamboge-50/70 ease-in-out pt-[20vh] px-[5vw] space-y-4 flex flex-col"
+>
   <h2
     class="lexend-zetta-bold p-2 text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
   >
@@ -18,5 +21,5 @@
   <div>
     <!-- future content -->
   </div>
-  <app-back-button />
+  <app-back-button [element]="this.element" />
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { Location } from '@angular/common';
 import { BackButtonComponent } from '../ui/back-button/back-button.component';
 
@@ -9,8 +9,10 @@ import { BackButtonComponent } from '../ui/back-button/back-button.component';
   styleUrl: './about.component.css',
 })
 export class AboutComponent {
+  @ViewChild('element') element!: ElementRef<HTMLElement>;
   constructor(private location: Location) {}
-  goBack(): void {
-    this.location.back();
+
+  ngAfterViewInit(): void {
+    this.element.nativeElement.classList.add('fade-in');
   }
 }

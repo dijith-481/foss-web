@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
@@ -9,7 +9,14 @@ import { Location } from '@angular/common';
 })
 export class BackButtonComponent {
   constructor(private location: Location) {}
+
+  @Input() element!: ElementRef<HTMLElement>;
   goBack(): void {
-    this.location.back();
+    this.element.nativeElement.classList.remove('fade-in');
+    this.element.nativeElement.classList.add('fade-out');
+
+    setTimeout(() => {
+      this.location.back();
+    }, 1500);
   }
 }
