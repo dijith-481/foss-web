@@ -1,0 +1,18 @@
+<div class="pt-[20vh] px-[5vw] space-y-6">
+  @if (blog$ | async; as blog) {
+    @if (blog) {
+      <app-blog-page
+        [blogTitle]="blog.blogTitle"
+        [description]="blog.description"
+        [imageUrl]="blog.imageUrl"
+        [author]="blog.author"
+        [dateTime]="blog.dateTime"
+        [subtitle]="blog.subtitle"
+      ></app-blog-page>
+    } @else {
+      <p class="not-found">error</p>
+    }
+  } @else {
+    <p class="loading">Loading</p>
+  }
+</div>

@@ -1,0 +1,33 @@
+<div class="flex flex-col space-y-2 ">
+<app-back-button/>
+<article class="backdrop-blur-3xl   border-gamboge-400/20 border rounded-2xl p-4">
+  <header class="text-gamboge-50/75 space-y-2" >
+    <h1 class=" text-5xl text-gamboge-50/75 font-black">{{ blogTitle }}</h1>
+    <div>
+    @if (subtitle) {
+      <p class="text-gamboge-50/50">{{ subtitle }}</p>
+    }
+        @if (dateTime) {
+          <time class="text-gamboge-50/50"[attr.datetime]="dateTime">{{ dateTime }}</time>
+        }
+
+    @if (author) {
+      <div>
+        @if (author) {
+          <span class="text-gamboge-400">By {{ author }}</span>
+        }
+      </div>
+    }
+    </div>
+  </header>
+  @if (imageUrl) {
+    <img [src]="imageUrl" class="max-w-2/3 aspect-auto mx-auto " [alt]="blogTitle + ' image'" />
+  }
+  <section class="pt-6 px-4 text-gamboge-50/70 w-[80vw]">
+    <p>{{ description }}</p>
+  </section>
+</article>
+<app-back-button/>
+  <div class="h-[20vh]">
+</div >
+</div >
