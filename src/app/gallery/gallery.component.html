@@ -1,4 +1,4 @@
-<div #element class="text-gamboge-50/70 fade-in pt-[20vh] px-[3vw] space-y-4  ">
+<div #element class="text-gamboge-50/70 fade-in pt-[5vh] md:pt-[20vh] px-[5vw] space-y-4   ">
 
   <div class="flex flex-row justify-between">
   <h2
@@ -14,16 +14,16 @@
 
 @if (images$ | async; as images) {
   @if (images.length > 0) {
-    <div #container class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 ">
+    <div #container class="  flex items-center space-y-2 space-x-2 justify-center  flex-row flex-wrap ">
       @for (image of images; track image.id) {
-        <div class=" relative overflow-hidden rounded-sm border-gamboge-50/10 border group ">
+        <div class=" w-full md:w-[45%] relative overflow-hidden rounded-sm border-gamboge-50/10 border group ">
           <img
             [src]="image.imageUrl"
             class="w-full aspect-video  object-cover group-hover:scale-104 transition-transform duration-1000 ease-in-out"
             [alt]="image.imageTitle"
            />
 
-      <h3 class="absolute bottom-0 group-hover:translate-x-4  left-0 text-gamboge-400 p-2 bg-gradient-to-t backdrop-blur-lg w-full bg-foss-bg/10  font-black text-sm lato-black pb-3 group-hover:opacity-100 transition-all duration-1000 ease-in-out  opacity-0 ">
+      <h3 class="absolute bottom-0   left-0 text-gamboge-400 p-2 bg-gradient-to-t backdrop-blur-lg w-full bg-foss-bg/10  font-black text-sm lato-black pb-3 group-hover:opacity-100 transition-all duration-1000 ease-in-out  opacity-0 ">
         {{ image.imageTitle }}
       </h3>
          </div>
@@ -36,7 +36,7 @@
 } @else {
   <p class="text-center text-gamboge-50/70 p-4">Loading images...</p>
 }
-  <div class="h-[20vh]"></div>
+  <div class=" h-[5vh] md:h-[5vh]"></div>
 
 <!-- <app-back-button [element]="this.element"/> -->
 </div>

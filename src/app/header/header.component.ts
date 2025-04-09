@@ -8,10 +8,11 @@ import {
 } from '@angular/core';
 import { Location } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SocialsComponent } from '../socials/socials.component';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, SocialsComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

@@ -12,11 +12,17 @@ export class BackButtonComponent {
 
   @Input() element!: ElementRef<HTMLElement>;
   goBack(): void {
-    this.element.nativeElement.classList.remove('fade-in');
-    this.element.nativeElement.classList.add('fade-out');
+    if (this.element && this.element.nativeElement) {
+      this.element.nativeElement.classList.remove('fade-in');
+      this.element.nativeElement.classList.add('fade-out');
 
-    setTimeout(() => {
-      this.location.back();
-    }, 1000);
+      setTimeout(() => {
+        this.location.back();
+        return;
+      }, 1000);
+    } else {
+      console.log('none');
+    }
+    // this.location.back();
   }
 }

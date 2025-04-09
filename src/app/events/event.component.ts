@@ -5,6 +5,7 @@ import { AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Event } from './event.model';
 import { TruncatePipe } from '../shared/pipes/truncate.pipe';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-event',
   imports: [AsyncPipe, RouterLink, TruncatePipe],
@@ -22,6 +23,8 @@ export class EventComponent {
   }
 
   loadEvents(): void {
-    this.events$ = this.http.get<Event[]>(this.eventsUrl);
+    this.events$ = this.http
+      .get<Event[]>(this.eventsUrl)
+      .pipe(map((events: Event[]) => events.reverse()));
   }
 }

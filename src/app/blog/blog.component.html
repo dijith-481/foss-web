@@ -1,4 +1,4 @@
-<div class="text-gamboge-50/70 fade-in pt-[20vh] px-[5vw] space-y-4  ">
+<div class="text-gamboge-50/70 fade-in pt-[5vh] md:pt-[20vh] px-[5vw] space-y-4  ">
   <h2
 
       routerLink="/blogs"
@@ -17,14 +17,14 @@
         <article  class=" group w-full border hover:border-gamboge-400/50 transition-all duration-500 ease-in-out hover: hover:bg-gamboge-400/10 backdrop-blur-3xl border-gamboge-400/20 min-h-[18vh] max-h-20vh  p-4 rounded-2xl  " >
 
           <header>
-                <div class="flex flex-row justify-between ">
+                <div class="flex flex-row justify-between w-full ">
             <h3 class="text-gamboge-400/70 font-black text-xl">
 {{ blog.blogTitle }}
             </h3>
 @if (blog.dateTime) {
-                  <time class="text-gamboge-50/40 text-[15px] p-2 absolute top-4 right-24" [attr.datetime]="blog.dateTime">{{ blog.dateTime  }}</time>
+                  <time class="text-gamboge-50/40 text-[15px] p-2" [attr.datetime]="blog.dateTime">{{ blog.dateTime  }}</time>
                 }
-                  <span class="material-symbols-outlined absolute top-4 right-4 group-hover:bg-gamboge-400/40 group-hover:backdrop-blur-3xl group-hover:text-gamboge-400 group-hover:w-14 w-10  rounded-2xl transition-all duration-1000 ease-in-out p-2 text-end">
+                  <span class="material-symbols-outlined  group-hover:bg-gamboge-400/40 max-h-10 group-hover:backdrop-blur-3xl group-hover:text-gamboge-400 group-hover:w-14 w-10  rounded-2xl transition-all duration-1000 ease-in-out p-2 text-end">
 arrow_forward
 </span>
                 </div>
@@ -50,4 +50,6 @@ arrow_forward
   <p>Loading </p>
 }
 
+  <div class=" h-[5vh] md:h-[5vh]"></div>
 </div>
+

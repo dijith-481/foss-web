@@ -5,6 +5,7 @@ import { AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Blog } from './blog.model';
 import { TruncatePipe } from '../shared/pipes/truncate.pipe';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-blog',
   imports: [AsyncPipe, RouterLink, TruncatePipe],
@@ -22,6 +23,9 @@ export class BlogComponent {
   }
 
   loadBlogs(): void {
-    this.blogs$ = this.http.get<Blog[]>(this.blogsUrl);
+    this.blogs$ = this.http
+      .get<Blog[]>(this.blogsUrl)
+      .pipe(map((blogs: Blog[]) => blogs.reverse()));
+    // this.blogs$ = this.http.get<Blog[]>(this.blogsUrl);
   }
 }

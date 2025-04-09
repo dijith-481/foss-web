@@ -1,47 +1,27 @@
 [
   {
     "id": 1,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
+    "imageTitle": "Foss-Hack",
+    "imageUrl": "/gallery/foss-hack.png"
   },
   {
     "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
-  },
-  {
-    "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
-  },
-  {
-    "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
-  },
-  {
-    "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
-  },
-  {
-    "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
-  },
-  {
-    "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
-  },
-  {
-    "id": 2,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png"
+    "imageTitle": "Genesis",
+    "imageUrl": "/gallery/genesis.png"
   },
   {
     "id": 3,
-    "imageTitle": "Angular's New Control Flow",
-    "imageUrl": "fossmec_logo.jpg"
+    "imageTitle": "Build it up",
+    "imageUrl": "./gallery/build-it-up0.png"
+  },
+  {
+    "id": 4,
+    "imageTitle": "Build it up",
+    "imageUrl": "./gallery/build-it-up1.png"
+  },
+  {
+    "id": 5,
+    "imageTitle": "Build it up",
+    "imageUrl": "./gallery/build-it-up2.png"
   }
 ]

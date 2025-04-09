@@ -1,5 +1,6 @@
-<div class="flex fade-in flex-col space-y-2 ">
-<app-back-button/>
+<div #element class="flex fade-in flex-col space-y-2 ">
+
+<app-back-button [element]=this.element/>
 <article class="backdrop-blur-3xl   border-gamboge-400/20 border rounded-2xl p-4">
   <header class="text-gamboge-50/75 space-y-2" >
     <h1 class=" text-5xl text-gamboge-50/75 font-black">{{ blogTitle }}</h1>
@@ -27,7 +28,7 @@
     <p>{{ description }}</p>
   </section>
 </article>
-<app-back-button/>
+<app-back-button [element]=this.element/>
   <div class="h-[20vh]">
 </div >
 </div >

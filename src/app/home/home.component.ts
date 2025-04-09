@@ -4,12 +4,14 @@ import { HeaderComponent } from '../header/header.component';
 import { EventComponent } from '../events/event.component';
 import { BlogComponent } from '../blog/blog.component';
 import { GalleryComponent } from '../gallery/gallery.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
   imports: [
     LandingComponent,
     HeaderComponent,
+    FooterComponent,
     EventComponent,
     BlogComponent,
     GalleryComponent,

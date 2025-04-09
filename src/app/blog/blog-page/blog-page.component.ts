@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild } from '@angular/core';
 import { BackButtonComponent } from '../../ui/back-button/back-button.component';
 
 @Component({
@@ -8,10 +8,17 @@ import { BackButtonComponent } from '../../ui/back-button/back-button.component'
   styleUrl: './blog-page.component.css',
 })
 export class BlogPageComponent {
+  @ViewChild('element') element!: ElementRef<HTMLElement>;
   @Input({ required: true }) blogTitle!: string;
   @Input({ required: true }) description!: string;
   @Input() imageUrl?: string;
   @Input() author?: string;
   @Input() dateTime?: string | Date;
   @Input() subtitle?: string;
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.element.nativeElement.classList.add('fade-in');
+    }, 0);
+  }
 }

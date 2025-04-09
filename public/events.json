@@ -1,27 +1,22 @@
 [
   {
     "id": 1,
-    "eventTitle": "Angular's New Control Flow",
-    "imageUrl": "bg.png",
-    "buttonUrl": "https://www.google.com",
-    "buttonContent": "clickhere",
-    "description": "Standalone components, introduced in Angular 14 and becoming the default in v17, offer a more streamlined way to build applications without NgModules. Learn the basics and how to migrate existing projects.Standalone components, introduced in Angular 14 and becoming the default in v17, offer a more streamlined way to build applications without NgModules. Learn the basics and how to migrate existing projects."
+    "eventTitle": "DebUtsav'24",
+    "imageUrl": "events/debutsav.png",
+    "buttonUrl": "https://debutsav.debian.org.in",
+    "buttonContent": "know more",
+    "description": "This one-day event aims to unite Debian enthusiasts, free software contributors, and the FOSS community, providing a platform to explore open-source software, engage in hands-on sessions, and contribute to Debian projects. Participants will also have the opportunity to enhance documentation, write code, and network with industry experts. Join us for an immersive open-source experience!"
   },
   {
     "id": 2,
-    "eventTitle": "Getting Started with Standalone Components",
-    "description": "Standalone components, introduced in Angular 14 and becoming the default in v17, offer a more streamlined way to build applications without NgModules. Learn the basics and how to migrate existing projects.",
-    "imageUrl": "assets/images/components.jpg"
+    "eventTitle": "Let's Git it",
+    "description": "Stuck in code chaos? Scared of losing your work? Want to collaborate like a pro? . Join us for an exciting journey into version control that will transform your coding life forever!, Whether you’re a complete beginner or a code wizard , you’ll discover the magic of Git and GitHub.",
+    "imageUrl": "events/lets-git-it.png"
   },
   {
     "id": 3,
-    "eventTitle": "Understanding HttpClient in Angular",
-    "description": "Making HTTP requests is fundamental to most web applications. This post covers the essentials of Angular's HttpClient, including GET requests, error handling, and working with Observables.",
-    "author": "Chris Client"
-  },
-  {
-    "id": 4,
-    "eventTitle": "Minimal Post Example",
-    "description": "This post only has the required fields: a title and a description. All optional fields like image, author, date, and subtitle are omitted to demonstrate the child component's handling of optional inputs."
+    "eventTitle": "PravConf 2025",
+    "description": "This conference is about building a digital world where your privacy matters. We'll discuss how to create better, safer technology, different from big techs like WhatsApp.",
+    "imageUrl": "events/prav-conf.png"
   }
 ]
