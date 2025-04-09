@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "eventTitle": "Angular's New Control Flow",
+    "imageUrl": "bg.png",
+    "buttonUrl": "https://www.google.com",
+    "buttonContent": "clickhere",
+    "description": "Standalone components, introduced in Angular 14 and becoming the default in v17, offer a more streamlined way to build applications without NgModules. Learn the basics and how to migrate existing projects.Standalone components, introduced in Angular 14 and becoming the default in v17, offer a more streamlined way to build applications without NgModules. Learn the basics and how to migrate existing projects."
+  },
+  {
+    "id": 2,
+    "eventTitle": "Getting Started with Standalone Components",
+    "description": "Standalone components, introduced in Angular 14 and becoming the default in v17, offer a more streamlined way to build applications without NgModules. Learn the basics and how to migrate existing projects.",
+    "imageUrl": "assets/images/components.jpg"
+  },
+  {
+    "id": 3,
+    "eventTitle": "Understanding HttpClient in Angular",
+    "description": "Making HTTP requests is fundamental to most web applications. This post covers the essentials of Angular's HttpClient, including GET requests, error handling, and working with Observables.",
+    "author": "Chris Client"
+  },
+  {
+    "id": 4,
+    "eventTitle": "Minimal Post Example",
+    "description": "This post only has the required fields: a title and a description. All optional fields like image, author, date, and subtitle are omitted to demonstrate the child component's handling of optional inputs."
+  }
+]
