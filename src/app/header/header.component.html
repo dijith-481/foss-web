@@ -1,6 +1,6 @@
 <header
   #opacity
-  class="bg-foss-bg/80 z-50 backdrop-blur-xl lato-regular fixed top-0 left-0 w-full z-9 transition-all duration-1000 p-3 h-12 ease-in-out"
+  class="bg-foss-bg/80 z-50 backdrop-blur-xl text-3xl lato-regular fixed top-0 left-0 w-full z-9 transition-all duration-1000 p-3 max-h-24 ease-in-out"
 >
   <nav class="flex flex-row pl-16 justify-between">
     <a routerLink="/" class="lexend-zetta-bold flex w-full text-gamboge-500">
@@ -12,11 +12,11 @@
 <div
   #sidemenu
   (click)="openSideMenu()"
-  class="fixed transition-all duration-700 w-0 ease-in-out top-0 left-0 bg-gamboge-400 z-30 h-screen invisible"
+  class="fixed transition-all flex flex-col justify-between duration-700 w-0 ease-in-out top-0 left-0 bg-gamboge-400 z-30 h-full invisible"
 >
   <div
     #sidemenucontent
-    class="text-gamboge-50/30 font-black text-xl transition-all duration-700 ease-in-out flex flex-col pt-32 pl-[5vw]"
+    class="text-gamboge-50/30 font-black text-xl transition-all h-full duration-700 ease-in-out flex flex-col pt-32 pl-[5vw] pb-[30vh]"
   >
     <a
       class="transition-all duration-700 ease-in-out text-gamboge-50/80 hover:text-foss-bg"
@@ -38,16 +38,15 @@
       routerLink="gallery"
       >gallery</a
     >
-
-    <app-socials />
   </div>
+  <app-socials />
 </div>
 
 <div
   (click)="openSideMenu()"
   class="p-3 fixed top-0 left-0 text-gamboge-400 z-50"
 >
-  <span class="material-symbols-outlined" style="font-size: 1.2rem">
+  <span class="material-symbols-outlined" style="font-size: 2.5rem">
     menu
   </span>
 </div>

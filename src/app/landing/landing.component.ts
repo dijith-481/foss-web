@@ -23,8 +23,8 @@ export class LandingComponent {
   @ViewChild('blur2') blurelement2!: ElementRef<HTMLElement>;
   @ViewChild('blur3') blurelement3!: ElementRef<HTMLElement>;
   @Input() maxBlurPx: number = 10;
-  @Input() blurstart: number = window.innerHeight / 80;
-  @Input() scrollRangePx: number = window.innerHeight * 1.5;
+  @Input() blurstart: number = Math.min(window.innerHeight / 80, 150);
+  @Input() scrollRangePx: number = Math.min(window.innerHeight * 1.6, 800);
 
   currentBlur: number = 0;
   constructor(private renderer: Renderer2) {}
@@ -67,14 +67,20 @@ export class LandingComponent {
     scrollFraction = Math.min(1, Math.max(0, scrollFraction));
     this.currentBlur = scrollFraction * this.maxBlurPx;
     let blurStyle = `blur(${this.currentBlur.toFixed(2)}px)`;
-    if (scrollFraction == 1) {
-      this.blurelement1.nativeElement.style.visibility = 'hidden';
-      this.blurelement2.nativeElement.style.visibility = 'hidden';
+
+    if (scrollFraction >= 0.45) {
       this.blurelement3.nativeElement.style.visibility = 'hidden';
     } else {
+      this.blurelement3.nativeElement.style.visibility = 'visible';
+    }
+    if (scrollFraction == 1) {
+      this.blurelement3.nativeElement.style.visibility = 'hidden';
+      this.blurelement1.nativeElement.style.visibility = 'hidden';
+      this.blurelement2.nativeElement.style.visibility = 'hidden';
+    } else {
+      this.blurelement3.nativeElement.style.visibility = 'visible';
       this.blurelement1.nativeElement.style.visibility = 'visible';
       this.blurelement2.nativeElement.style.visibility = 'visible';
-      this.blurelement3.nativeElement.style.visibility = 'visible';
     }
     this.renderer.setStyle(
       this.blurelement2.nativeElement,

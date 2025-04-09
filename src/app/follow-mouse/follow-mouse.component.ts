@@ -10,7 +10,7 @@ export class FollowMouseComponent {
   x = 0;
   y = 0;
   squareSize = 0;
-  maxSquareSize = 100;
+  maxSquareSize = 130;
   mouseMoveTimeout: any;
 
   @HostListener('document:mousemove', ['$event'])
