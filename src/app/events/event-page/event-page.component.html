@@ -2,9 +2,9 @@
 <app-back-button [element]="this.element"/>
 <article class="backdrop-blur-3xl w-full   border-gamboge-400/20 border space-x-4 flex md:flex-row  flex-col   rounded-2xl p-4 ">
     <div class="w-auto flex flex-col justify-center">
-    <img [src]="imageUrl" class="aspect-square w-[50vw] z-10  rounded-lg" [alt]="eventTitle + ' image'" />
+    <img [src]="imageUrl" class="aspect-square md:w-[50vw] z-10  rounded-lg" [alt]="eventTitle + ' image'" />
     </div>
-    <div class="w-1/2 space-y-4 ">
+    <div class="w-full md:w-1/2 space-y-4 ">
   <header class="text-gamboge-50/75  pt-3" >
     <h1 class=" text-5xl text-gamboge-400 font-black">{{ eventTitle }}</h1>
   </header>
