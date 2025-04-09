@@ -1,0 +1,42 @@
+<div #element class="text-gamboge-50/70 fade-in pt-[20vh] px-[3vw] space-y-4  ">
+
+  <div class="flex flex-row justify-between">
+  <h2
+      routerLink="/events"
+    class="lexend-zetta-bold  text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
+  >
+    FOSS<span class="text-gamboge-50/80 font-normal">Gallery</span>
+  </h2>
+    <div class="flex flex-row h-8">
+    </div>
+  </div>
+
+
+@if (images$ | async; as images) {
+  @if (images.length > 0) {
+    <div #container class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 ">
+      @for (image of images; track image.id) {
+        <div class=" relative overflow-hidden rounded-sm border-gamboge-50/10 border group ">
+          <img
+            [src]="image.imageUrl"
+            class="w-full aspect-video  object-cover group-hover:scale-104 transition-transform duration-1000 ease-in-out"
+            [alt]="image.imageTitle"
+           />
+
+      <h3 class="absolute bottom-0 group-hover:translate-x-4  left-0 text-gamboge-400 p-2 bg-gradient-to-t backdrop-blur-lg w-full bg-foss-bg/10  font-black text-sm lato-black pb-3 group-hover:opacity-100 transition-all duration-1000 ease-in-out  opacity-0 ">
+        {{ image.imageTitle }}
+      </h3>
+         </div>
+
+      }
+    </div>
+  } @else {
+    <p class="text-center text-gamboge-50/50 p-4">No images found.</p>
+  }
+} @else {
+  <p class="text-center text-gamboge-50/70 p-4">Loading images...</p>
+}
+
+<app-back-button [element]="this.element"/>
+</div>
+

@@ -17,6 +17,6 @@ export class BackButtonComponent {
 
     setTimeout(() => {
       this.location.back();
-    }, 1500);
+    }, 1000);
   }
 }

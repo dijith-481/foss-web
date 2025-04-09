@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { FollowMouseComponent } from './follow-mouse/follow-mouse.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { BlogComponent } from './blog/blog.component';
     RouterOutlet,
     LandingComponent,
     BlogComponent,
+    GalleryComponent,
     HeaderComponent,
     AboutComponent,
     HomeComponent,

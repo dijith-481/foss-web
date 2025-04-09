@@ -6,6 +6,7 @@ import {} from './blog/blog-detail/blog-detail.component';
 import { EventComponent } from './events/event.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { AboutComponent } from './about/about.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 export const routes: Routes = [
   {
@@ -21,7 +22,13 @@ export const routes: Routes = [
   {
     path: 'blogs',
     component: BlogComponent,
-    title: 'Blogs',
+    title: 'Blog',
+  },
+
+  {
+    path: 'gallery',
+    component: GalleryComponent,
+    title: 'Gallery',
   },
   {
     path: 'events',

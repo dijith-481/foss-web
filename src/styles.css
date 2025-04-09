@@ -96,12 +96,12 @@
 .fade-in {
   opacity: 0;
   transform: translateX(-20px);
-  animation: fadeInLeft 1.5s ease-in-out forwards;
+  animation: fadeInLeft 0.8s ease-in-out forwards;
 }
 .fade-out {
   opacity: 1;
   transform: translateX(0px);
-  animation: fadeoutright 1.5s ease-in-out forwards;
+  animation: fadeoutright 0.8s ease-in-out forwards;
 }
 @keyframes fadeoutright {
   0% {
