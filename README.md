@@ -42,7 +42,7 @@ This repository contains the source code for the  landing page of **Foss Mec**, 
 
 1.  **Clone and Navigate to the repository:**
     ```bash
-    git clone https://github.com/dijith-481/foss-web.git && cd fossmec-web
+    git clone https://github.com/dijith-481/foss-web.git && cd foss-web
     ```
 
 2.  **Install dependencies:**
