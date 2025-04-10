@@ -1,0 +1,42 @@
+<div
+  class="text-gamboge-50/70 fade-in flex flex-col justify-start py-4 px-[5vw] space-y-4"
+>
+  <div class="flex flex-row justify-between">
+    <h2
+      class="lexend-zetta-bold p-2 text-gamboge-500 hover:text-gamboge-400 text-xl transition-colors duration-300 ease-in-out"
+    >
+      Core<span class="text-gamboge-50/80 font-normal">Team</span>
+    </h2>
+    <div class="flex flex-row h-8"></div>
+  </div>
+  @if (core$ | async; as coreteam) {
+    @if (coreteam.length > 0) {
+      <div
+        #container
+        class="flex flex-row justify-center w-full items-start flex-wrap gap-x-4 md:gap-x-16 gap-y-4 md:gap-y-12"
+      >
+        @for (member of coreteam; track member.id) {
+          <div class="group flex flex-col items-center">
+            <div
+              class="overflow-hidden w-12 md:w-22 hover:border-gamboge-400 border flex justify-center rounded-full"
+            >
+              <img
+                [src]="member.imageUrl"
+                class="aspect-square w-full group-hover:scale-105 transition-all duration-1000 ease-in-out"
+                [alt]="member.name"
+              />
+            </div>
+            <div class="p-2">
+              <p class="text-gamboge-400 font-bold">{{ member.name }}</p>
+              <p>{{ member.position }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p>nothing</p>
+    }
+  } @else {
+    <p>Loading</p>
+  }
+</div>

@@ -2,8 +2,11 @@
   #element
   class="text-gamboge-50/70 ease-in-out pt-[20vh] px-[5vw] space-y-4 flex flex-col"
 >
+  <div class="px-2">
+    <app-back-button [element]="this.element" />
+  </div>
   <h2
-    class="lexend-zetta-bold p-2 text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
+    class="lexend-zetta-bold px-2 text-gamboge-500 hover:text-gamboge-400 text-2xl transition-colors duration-300 ease-in-out"
   >
     About
   </h2>
@@ -17,9 +20,7 @@
     We focus on cultivating a collaborative culture among college students as
     well as society at large by coding and contributing to various open source
     projects.
+
+    <app-coreteam />
   </p>
-  <div>
-    <!-- future content -->
-  </div>
-  <app-back-button [element]="this.element" />
 </div>

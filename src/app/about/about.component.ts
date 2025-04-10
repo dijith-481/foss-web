@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { Location } from '@angular/common';
 import { BackButtonComponent } from '../ui/back-button/back-button.component';
+import { CoreteamComponent } from '../coreteam/coreteam.component';
 
 @Component({
   selector: 'app-about',
-  imports: [BackButtonComponent],
+  imports: [BackButtonComponent, CoreteamComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })

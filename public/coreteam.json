@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Person1",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "executive"
+  },
+  {
+    "id": 2,
+    "name": "Person2",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "executive"
+  },
+  {
+    "id": 3,
+    "name": "Person3",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "executive"
+  },
+  {
+    "id": 4,
+    "name": "Person4",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "member"
+  },
+  {
+    "id": 5,
+    "name": "Person5",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "member"
+  },
+  {
+    "id": 6,
+    "name": "Person6",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "member"
+  },
+  {
+    "id": 7,
+    "name": "Person7",
+    "imageUrl": "core-team/profile_placeholder.png",
+    "position": "member"
+  }
+]
