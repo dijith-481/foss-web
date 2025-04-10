@@ -11,11 +11,10 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { BackButtonComponent } from '../ui/back-button/back-button.component';
 
 @Component({
   selector: 'app-gallery',
-  imports: [RouterLink, AsyncPipe, BackButtonComponent],
+  imports: [RouterLink, AsyncPipe],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css',
 })

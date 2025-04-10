@@ -1,17 +1,16 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, switchMap, catchError } from 'rxjs/operators';
 import { AsyncPipe } from '@angular/common';
-
 import { BlogPageComponent } from '../blog-page/blog-page.component';
 import { Blog } from '../blog.model';
 
 @Component({
   selector: 'app-blog-detail',
   standalone: true,
-  imports: [BlogPageComponent, AsyncPipe, RouterLink],
+  imports: [BlogPageComponent, AsyncPipe],
   templateUrl: './blog-detail.component.html',
 })
 export class BlogDetailComponent implements OnInit {

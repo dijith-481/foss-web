@@ -1,8 +1,8 @@
 <div  #element class="flex fade-in flex-col space-y-2   ">
 <app-back-button [element]="this.element"/>
-<article class="backdrop-blur-3xl w-full   border-gamboge-400/20 border space-x-4 flex md:flex-row  flex-col   rounded-2xl p-4 ">
-    <div class="w-auto flex flex-col justify-center">
-    <img [src]="imageUrl" class="aspect-square md:w-[50vw] z-10  rounded-lg" [alt]="eventTitle + ' image'" />
+<article class="backdrop-blur-3xl w-full   border-gamboge-400/20 border md:space-x-4 flex md:flex-row  flex-col items-center  justify-center  rounded-2xl p-4 ">
+    <div class="md:w-[50vw] flex flex-col justify-center overflow-hidden rounded-lg">
+    <img [src]="imageUrl" class="aspect-square w-full  z-10 hover:scale-105   transition-all duration-1000 ease-in-out " [alt]="eventTitle + ' image'" />
     </div>
     <div class="w-full md:w-1/2 space-y-4 ">
   <header class="text-gamboge-50/75  pt-3" >

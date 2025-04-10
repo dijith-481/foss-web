@@ -19,10 +19,9 @@ export class BackButtonComponent {
       setTimeout(() => {
         this.location.back();
         return;
-      }, 1000);
+      }, 400);
     } else {
       console.log('none');
     }
-    // this.location.back();
   }
 }

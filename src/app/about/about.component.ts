@@ -11,7 +11,7 @@ import { CoreteamComponent } from '../coreteam/coreteam.component';
 })
 export class AboutComponent {
   @ViewChild('element') element!: ElementRef<HTMLElement>;
-  constructor(private location: Location) {}
+  constructor() {}
 
   ngAfterViewInit(): void {
     this.element.nativeElement.classList.add('fade-in');

@@ -26,6 +26,5 @@ export class BlogComponent {
     this.blogs$ = this.http
       .get<Blog[]>(this.blogsUrl)
       .pipe(map((blogs: Blog[]) => blogs.reverse()));
-    // this.blogs$ = this.http.get<Blog[]>(this.blogsUrl);
   }
 }

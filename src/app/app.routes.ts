@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
-import {} from './blog/blog-detail/blog-detail.component';
 import { EventComponent } from './events/event.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { AboutComponent } from './about/about.component';
@@ -12,7 +11,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Home',
+    title: 'Foss Mec',
   },
   {
     path: 'about',
@@ -22,28 +21,28 @@ export const routes: Routes = [
   {
     path: 'blogs',
     component: BlogComponent,
-    title: 'Blog',
+    title: 'Foss Blog',
   },
 
   {
     path: 'gallery',
     component: GalleryComponent,
-    title: 'Gallery',
+    title: 'Foss Gallery',
   },
   {
     path: 'events',
     component: EventComponent,
-    title: 'Events',
+    title: 'Foss Events',
   },
   {
     path: 'blog/:id',
     component: BlogDetailComponent,
-    title: 'post',
+    title: 'Foss blogpost',
   },
   {
     path: 'event/:id',
     component: EventDetailComponent,
-    title: 'post',
+    title: 'Foss blogpost',
   },
   { path: '**', redirectTo: '' },
 ];
