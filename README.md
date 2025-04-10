@@ -85,13 +85,13 @@ Blog posts are defined in `blogs.json`. Clicking a blog card navigates to a deta
 ```json
 [
   {
-    "id": number, // Unique identifier for routing
-    "blogTitle": string, // Main title of the blog post
-    "subtitle": string, // A short subtitle or tagline
-    "author": string, // Name of the author
-    "dateTime": string, // ISO 8601 format timestamp (e.g., "YYYY-MM-DDTHH:mm:ssZ")
-    "imageUrl": string, // Relative path to the blog post's cover image (e.g., "blog/image.jpg")
-    "description": string // The full content of the blog post (\n seperated lines)
+    "id": number, 
+    "blogTitle": string,
+    "subtitle": string,
+    "author": string,
+    "dateTime": string,
+    "imageUrl": string,
+    "description": string
   }
 ]
 ```
@@ -105,12 +105,12 @@ Event listings are defined in `events.json`. Clicking an event card navigates to
 ```json
 [
   {
-    "id": number, // Unique identifier for routing
-    "eventTitle": string, // Title of the event
-    "imageUrl": string, // Relative path to the event's image (e.g., "events/event.png")
-    "buttonUrl": string | null, // Optional: URL for the button
-    "buttonContent": string | null, // Optional: Text content for the button (e.g., "Register Now")
-    "description": string // Detailed description of the event
+    "id": number,
+    "eventTitle": string,
+    "imageUrl": string,
+    "buttonUrl": string | null,
+    "buttonContent": string | null,
+    "description": string
   }
 ]
 ```
@@ -124,9 +124,9 @@ Image gallery items are defined in `gallery.json`.
 ```json
 [
   {
-    "id": number, // Unique identifier
-    "imageTitle": string, // Title or caption for the image
-    "imageUrl": string // Relative path to the gallery image (e.g., "/gallery/image.png")
+    "id": number,
+    "imageTitle": string,
+    "imageUrl": string
   }
 ]
 ```
@@ -139,10 +139,10 @@ Details about the core team members.
 ```json
 [
   {
-    "id": number, // Unique identifier
-    "name": string, // Member's full name
-    "position": string, // Member's position/role in the club
-    "imageUrl": string // Relative path to the member's photo (e.g., "members/member.jpg")
+    "id": number,
+    "name": string
+    "position": string,
+    "imageUrl": string
   }
 ]
 ```
