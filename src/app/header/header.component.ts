@@ -66,7 +66,12 @@ export class HeaderComponent {
       );
     }
   }
-  openSideMenu() {
+  openSideMenu(val: number = 0) {
+    if (val === 1) {
+      this.sideMenuState = false;
+    } else if (val === 2) {
+      this.sideMenuState = true;
+    }
     if (this.sideMenuState) {
       this.sideMenuState = false;
       this.sideMenuContentElement.nativeElement.style.opacity = '0';

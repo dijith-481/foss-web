@@ -12,6 +12,7 @@
 <div
   #sidemenu
   (click)="openSideMenu()"
+  (mouseleave)="openSideMenu(2)"
   class="fixed transition-all flex flex-col justify-between duration-700 w-0 ease-in-out top-0 left-0 bg-gamboge-500/80 backdrop-blur-xl z-30 h-full invisible"
 >
   <div
@@ -44,6 +45,7 @@
 
 <div
   (click)="openSideMenu()"
+  (mouseenter)="openSideMenu(1)"
   class="p-3 fixed top-0 left-0 text-gamboge-500 z-50"
 >
   <span class="material-symbols-outlined" style="font-size: 2.5rem">
